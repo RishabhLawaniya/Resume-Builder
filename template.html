@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Choose template</title>
+    <style type="text/css">
+      #cv-form{
+        /*display: none;*/
+      }
+      .myimage{
+        border-radius: 50%;
+        width: 200px;
+      }
+      #firstcol{
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+<!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Resume Builder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Tech resume</a>
+          <a class="dropdown-item" href="#">Professional</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Teacher</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact us</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!--NAVBAR-->
+
+<!--CV-FORM-->
+<div class="container" id="cv-form">
+ <h1 class="text-center my-2">Resume Builder</h1>
+    <div class="row">
+  <div class="col-md-6">
+    <h3 class="text-center">Personal Information</h3>
+
+    <div class="form-group mt-2">
+      <label for="nameField">Your Name</label>
+      <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+    </div>
+
+    <div class="form-group mt-2">
+      <label for="contactField">Contact Number</label>
+      <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+    </div>
+
+    <div class="form-group mt-2">
+      <label for="addressField">Address</label>
+      <textarea  id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea> 
+    </div>
+
+   <p class="text-secondary my-2">Important Links</p>
+
+    <div class="form-group mt-2">
+      <label for="fbfield">Facebook</label>
+      <input type="text" id="fbfield" placeholder="Enter here" class="form-control" rows="5">
+    </div>
+
+    <div class="form-group mt-2">
+      <label for="instafield">Instagram</label>
+      <input type="text" id="instafield" placeholder="Enter here" class="form-control" rows="5">
+    </div>
+
+    <div class="form-group mt-2">
+      <label for="linkedfield">LinkedIn</label>
+      <input type="text" id="linkedfield" placeholder="Enter here" class="form-control" rows="5">
+    </div>
+
+
+  </div>
+  <div class="col-md-6">
+    <h3 class="text-center">Professional Information</h3>
+
+    <div class="form-group mt-2">
+      <label for="objectiveField">Objective</label>
+      <textarea id="objectiveField" placeholder="Enter here" class="form-control" rows="2"></textarea>
+    </div>
+
+    <div class="form-group mt-2 " id="we">
+      <label for="">Work Experience</label>
+      <textarea  placeholder="Enter here" class="form-control weField" ></textarea>
+
+      <div class="container text-center mt-2" id="weAddButton">
+        <button onclick="addNewWEField()" class="btn btn-dark btn-sm">Add</button>
+      </div>
+    </div>
+
+    <div class="form-group mt-2" id="aq">
+      <label for="">Academic Qualifications</label>
+      <textarea  placeholder="Enter here" class="form-control eqField" ></textarea>
+
+      <div class="container text-center mt-2 " id="aqAddButton">
+        <button onclick="addNewAQField()" class="btn btn-dark btn-sm">Add</button>
+      </div>
+    </div>
+
+  </div>
+    </div>
+    <div class="container mt-5 text-center">
+  <button onclick="generateCV()" class="btn btn-dark btn-sm" >GENERATE CV</button>
+  </div>
+</div>
+<!--CV-FORM-->
+
+<!--cv template -->
+<div class="container" id="cv-template">
+  <div class="row">
+    <div class="col-md-4 my-5 text-center" id="firstcol">
+      <!--first col-->
+      <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg" alt="profile picture" class="img-fluid myimage">
+      <h3 id="nameT1">Aman sharma</h3>
+      <h3 id="contactT">+91 8058381032 , +91 9352442482</h3>
+      <h3 id="addressT">shiv nagar , bharatpur(Rajasthan)</h3>
+
+      <p id="fbT"><a href="#">FACEBOOK</a></p>
+      <p id="instaT"><a href="#">INSTAGRAM</a></p>
+      <p id="linkedT"><a href="#">LINKEDIN</a></p>
+      
+    </div>
+    <div class="col-md-8 my-5 text-center" id="secondcol">
+      <!--second col-->
+      <h1 id="nameT2" style="font-weight: 100px; background-color: aqua;">AMAN SHARMA</h1>
+
+      <!--objective card-->
+      <div class="card mt-4">
+        <div class="card-header">
+          <h3>OBJECTIVE</h3>
+        </div>
+        <div class="card-body">
+          <p id="objectiveT">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header" >
+          <h3>WORK EXPERIENCE</h3>
+        </div>
+        <div class="card-body">
+         <ul id="weT">
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+         </ul>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header" >
+          <h3>ACADEMIC QUALIFICATION</h3>
+        </div>
+        <div class="card-body">
+          <ul id="aqT">
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+         </ul>
+        </div>
+      </div>
+
+   <div class="container mt-5 text-center">
+   <button onclick="printcv()" class="btn btn-dark btn-sm">PRINT</button>
+   </div>
+
+
+    </div>
+    </div>
+</div> 
+<!--cv template -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      
+      function addNewWEField() {
+        let newNode = document.createElement('textarea');
+        newNode.classList.add('form-control');
+        newNode.classList.add('weField');
+        newNode.classList.add('mt-2');
+        newNode.setAttribute('placeholder' , 'Enter here');
+
+        let weOb = document.getElementById("we");
+        let weAddButtonOb = document.getElementById("weAddButton");
+
+        weOb.insertBefore(newNode, weAddButtonOb);
+      }
+
+      function addNewAQField() {
+        let newNode = document.createElement('textarea');
+        newNode.classList.add('form-control');
+        newNode.classList.add('aqField');
+        newNode.classList.add('mt-2');
+        newNode.setAttribute('placeholder' , 'Enter here');
+
+        let aqOb = document.getElementById("aq");
+        let aqAddButtonOb = document.getElementById("aqAddButton");
+
+        aqOb.insertBefore(newNode, aqAddButtonOb);
+      }
+
+      function generateCV() {
+
+        let nameField = document.getElementById("nameField").value;
+        let nameT1 = document.getElementById("nameT1");
+        nameT1.innerHTML = nameField;
+        
+
+
+//NAME
+        document.getElementById("nameT2").innerHTML = nameField;
+//CONTACT
+        document.getElementById("contactT").innerHTML = document.getElementById("contactField").value;
+//ADDRESS
+        document.getElementById("addressT").innerHTML = document.getElementById("addressField").value;
+//FACEBOOK
+        document.getElementById("fbT").innerHTML = document.getElementById("fbField").value;
+//INSTAGRAM
+        document.getElementById("instaT").innerHTML = document.getElementById("instaField").value;
+//LINKEDIN
+        document.getElementById("linkedT").innerHTML = document.getElementById("linkedField").value;
+//OBJECTIVE
+        document.getElementById("objectiveT").innerHTML = document.getElementById("objectiveField").value;
+        document.getElementById("work experience").innerHTML = document.getElementById("work expeirence").value;
+
+      
+
+
+
+        document.getElementById("cv-form").style.display='none';
+        document.getElementById("cv-template").style.display='block';
+      }
+
+function printcv() {
+  window.print();
+}
+    </script>
+  </body>
+</html>
